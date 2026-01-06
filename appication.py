@@ -18,35 +18,6 @@ except FileNotFoundError:
 def index():
     return render_template('index.html')
 
-# @app.route('/prediction', methods=['GET','POST'])
-# def predict():
-#     if request.method=='POST':
-#         # Keep these to capture form data
-#         Temperature = float(request.form.get('Temperature'))
-#         RH = float(request.form.get('RH'))
-#         Ws = float(request.form.get('Ws'))
-#         Rain = float(request.form.get('Rain'))
-#         FFMC = float(request.form.get('FFMC'))
-#         DMC = float(request.form.get('DMC'))
-#         DC = float(request.form.get('DC'))
-#         ISI = float(request.form.get('ISI'))
-#         BUI = float(request.form.get('BUI'))
-        
-#         # Classes and Region are captured but NOT passed to the scaler if it expects 9 features
-#         # Classes = float(request.form.get('Classes'))
-#         # Region = float(request.form.get('Region'))
-
-#         # PASS ONLY 9 FEATURES HERE
-#         input_data = [[Temperature, RH, Ws, Rain, FFMC, DMC, DC, ISI, BUI]]
-#         new_scaled_data = scaler_model.transform(input_data)
-        
-#         result = ridge_model.predict(new_scaled_data)
-        
-#         # Return to predict.html (or index.html) with the result variable
-#         return render_template('predict.html', result=result[0])
-#     else:
-#         return render_template('predict.html')
-
 @app.route('/prediction', methods=['GET','POST'])
 def predict():
     if request.method == 'POST':
