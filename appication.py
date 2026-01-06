@@ -49,8 +49,5 @@ def predict():
 
 if __name__=='__main__':
     app.run(host='0.0.0.0')
-    # ['Temperature', 'RH', 'Ws', 'Rain', 'FFMC', 'DMC', 'ISI', 'Classes',
+    # all the features ['Temperature', 'RH', 'Ws', 'Rain', 'FFMC', 'DMC', 'ISI', 'Classes',
     #    'Region']
-    
-    ['Temperature', 'RH', 'Ws', 'Rain', 'FFMC', 'DMC', 'ISI', 'Classes',
-       'Region']
